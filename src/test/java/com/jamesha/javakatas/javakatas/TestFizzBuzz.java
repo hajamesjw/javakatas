@@ -46,5 +46,6 @@ public class TestFizzBuzz {
 	public void testZeroReturnsException() {
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
 			FizzBuzz.fizzBuzz(0);
-		});	}
+		});	
+	}
 }

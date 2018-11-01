@@ -5,23 +5,25 @@ package com.jamesha.javakatas.javakatas;
  * If it is divisible by 5, replace it with “Buzz”. If it is divisible by 3 and 5 replace it with “FizzBuzz”.
  */
 public class FizzBuzz {
-	public static void printFizzBuzzTo(int i) {
-		
+	public static void printFizzBuzzTo(int x) {
+		for (int i = 1; i < x; i++) {
+			System.out.println(fizzBuzz(i));
+		}
 	}
 	
-	public static String fizzBuzz(int i) {
+	public static String fizzBuzz(int x) {
 		
-		if (i < 1) {
+		if (x < 1) {
 			throw new IllegalArgumentException();
-	    } else if (i % 3 == 0 && i % 5 == 0) {
+	    } else if (x % 3 == 0 && x % 5 == 0) {
 			return "FizzBuzz";
-		} else if (i % 3 == 0) {
+		} else if (x % 3 == 0) {
 			return "Fizz";
-		} else if (i % 5 == 0) {
+		} else if (x % 5 == 0) {
 			return "Buzz";
 		} 
 		
-		return String.valueOf(i);
+		return String.valueOf(x);
 	}
 }
 
