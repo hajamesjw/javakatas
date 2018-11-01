@@ -14,4 +14,9 @@ public class TestFizzBuzz {
 	public void testOneReturnsOne() {
 		assertEquals("1", FizzBuzz.fizzBuzz(1));
 	}
+	
+	@Test
+	public void testThreeReturnsFizz() {
+		assertEquals("Fizz", FizzBuzz.fizzBuzz(3));
+	}
 }
