@@ -1,7 +1,9 @@
 package com.jamesha.javakatas.javakatas;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /*
@@ -19,4 +21,30 @@ public class TestFizzBuzz {
 	public void testThreeReturnsFizz() {
 		assertEquals("Fizz", FizzBuzz.fizzBuzz(3));
 	}
+	
+	@Test
+	public void testFiveReturnsBuzz() {
+		assertEquals("Buzz", FizzBuzz.fizzBuzz(5));
+	}
+	
+	@Test
+	public void testSixReturnsFizz() {
+		assertEquals("Fizz", FizzBuzz.fizzBuzz(6));
+	}
+	
+	@Test
+	public void testTenReturnsBuzz() {
+		assertEquals("Buzz", FizzBuzz.fizzBuzz(10));
+	}
+	
+	@Test
+	public void testFifteenReturnsFizzBuzz() {
+		assertEquals("FizzBuzz", FizzBuzz.fizzBuzz(15));
+	}
+	
+	@Test
+	public void testZeroReturnsException() {
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			FizzBuzz.fizzBuzz(0);
+		});	}
 }
